@@ -1,0 +1,29 @@
+[
+   {
+      "featureType":"poi",
+      "elementType":"labels",
+      "stylers":[
+         {
+            "visibility":"off"
+         }
+      ]
+   },
+   {
+      "featureType":"road.highway",
+      "elementType":"geometry.fill",
+      "stylers":[
+         {
+            "color":"#ffebaf"
+         }
+      ]
+   },
+   {
+      "featureType":"road.highway",
+      "elementType":"geometry.stroke",
+      "stylers":[
+         {
+            "color":"#ffebaf"
+         }
+      ]
+   }
+]

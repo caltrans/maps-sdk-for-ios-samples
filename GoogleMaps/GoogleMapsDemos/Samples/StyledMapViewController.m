@@ -18,6 +18,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 static NSString *const kNormalType = @"Normal";
+static NSString *const kBugType = @"Bug";
 static NSString *const kRetroType = @"Retro";
 static NSString *const kGrayscaleType = @"Grayscale";
 static NSString *const kNightType = @"Night";
@@ -26,6 +27,7 @@ static NSString *const kNoPOIsType = @"No business points of interest, no transi
 @implementation StyledMapViewController {
   UIBarButtonItem *_barButtonItem;
   GMSMapView *_mapView;
+  GMSMapStyle *_bugStyle;
   GMSMapStyle *_retroStyle;
   GMSMapStyle *_grayscaleStyle;
   GMSMapStyle *_nightStyle;
@@ -39,6 +41,9 @@ static NSString *const kNoPOIsType = @"No business points of interest, no transi
   // error returned from |styleWithContentsOfFileURL:error:| if it returns nil. This error will
   // provide information on why your style was not able to be loaded.
 
+  NSURL *bugURL = [[NSBundle mainBundle] URLForResource:@"mapstyle-bug" withExtension:@"json"];
+  _bugStyle = [GMSMapStyle styleWithContentsOfFileURL:bugURL error:NULL];
+    
   NSURL *retroURL = [[NSBundle mainBundle] URLForResource:@"mapstyle-retro" withExtension:@"json"];
   _retroStyle = [GMSMapStyle styleWithContentsOfFileURL:retroURL error:NULL];
 
@@ -71,21 +76,22 @@ static NSString *const kNoPOIsType = @"No business points of interest, no transi
                             "  ]";
   _noPOIsStyle = [GMSMapStyle styleWithJSONString:noPOIsString error:NULL];
 
-  GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.868
-                                                          longitude:151.2086
+  GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: 34.6229538
+                                                          longitude: -119.3095251
                                                                zoom:12];
 
   _mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+  _mapView.trafficEnabled = true;
   self.view = _mapView;
 
-  _mapView.mapStyle = _retroStyle;
+  _mapView.mapStyle = _bugStyle;
 
   UIBarButtonItem *styleButton = [[UIBarButtonItem alloc] initWithTitle:@"Style"
                                                                   style:UIBarButtonItemStylePlain
                                                                  target:self
                                                                  action:@selector(changeMapStyle:)];
   self.navigationItem.rightBarButtonItem = styleButton;
-  self.navigationItem.title = kRetroType;
+  self.navigationItem.title = kBugType;
 }
 
 - (UIAlertAction *_Nonnull)actionWithTitle:(nonnull NSString *)title
@@ -107,6 +113,7 @@ static NSString *const kNoPOIsType = @"No business points of interest, no transi
       [UIAlertController alertControllerWithTitle:@"Select map style"
                                           message:nil
                                    preferredStyle:UIAlertControllerStyleActionSheet];
+  [alert addAction:[self actionWithTitle:kRetroType style:_bugStyle]];
   [alert addAction:[self actionWithTitle:kRetroType style:_retroStyle]];
   [alert addAction:[self actionWithTitle:kGrayscaleType style:_grayscaleStyle]];
   [alert addAction:[self actionWithTitle:kNightType style:_nightStyle]];

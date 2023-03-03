@@ -59,6 +59,7 @@
 		923880C43B9DEE1EFD7D230F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21267D205F7EC280F26D97ED /* main.m */; };
 		92679F9EBB1FEF1EE105E353 /* TrafficMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611E9F57BD5274878732C0BE /* TrafficMapViewController.m */; };
 		9A48AFB4E51FCDD215B5044C /* x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E4A5AC4E17EB252D617792 /* x29.png */; };
+		9CA5C49129B1AF2900961422 /* mapstyle-bug.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CA5C49029B1AF2900961422 /* mapstyle-bug.json */; };
 		9D688B947F1C938893B92EDD /* MapLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7BBD64FA078FC4259FCBD2 /* MapLayerViewController.m */; };
 		A330C5C1305B6AFDE8549C54 /* botswana-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 440513A7769094565EA82DD2 /* botswana-large.png */; };
 		A4A326C09602C12DE4851136 /* step1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C6A156792608F06437E5931 /* step1@2x.png */; };
@@ -178,6 +179,7 @@
 		91BCD28A8D5451665C5B3FDE /* spitfire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spitfire.png; sourceTree = "<group>"; };
 		937B2FC602E80ADC11CF364F /* aeroplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aeroplane.png; sourceTree = "<group>"; };
 		99C6A64731FB5249BA53255D /* step4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = step4.png; sourceTree = "<group>"; };
+		9CA5C49029B1AF2900961422 /* mapstyle-bug.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mapstyle-bug.json"; sourceTree = "<group>"; };
 		9F4CB893BCACB294FBCEC850 /* australia-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "australia-large.png"; sourceTree = "<group>"; };
 		A0518A8C9E543FFBA7F8305E /* VisibleRegionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisibleRegionViewController.m; sourceTree = "<group>"; };
 		A1D521E4FF1F8F85E084ED60 /* australia-large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "australia-large@2x.png"; sourceTree = "<group>"; };
@@ -279,7 +281,6 @@
 			children = (
 				BE522BB5DA72D3CFB638FDFD /* Pods-GoogleMapsDemos.default.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -337,6 +338,7 @@
 				2BC67BDB51522BC85EBFED8E /* bulgaria.png */,
 				57D0C4A29B66857C926387F0 /* glow-marker.png */,
 				430314741C873551A75A6748 /* glow-marker@2x.png */,
+				9CA5C49029B1AF2900961422 /* mapstyle-bug.json */,
 				FFEED4DDB04F69C84A1924F1 /* mapstyle-night.json */,
 				118A0FE8CA1D110B3C694A8D /* mapstyle-retro.json */,
 				B4C89E62C05816B590F45D57 /* mapstyle-silver.json */,
@@ -531,6 +533,7 @@
 				ED4617FD4C66219840E42297 /* popup_santa@2x.png in Resources */,
 				BBA68BA0DD2166869D252187 /* glow-marker.png in Resources */,
 				E15028A581780CEF233A75DC /* step1.png in Resources */,
+				9CA5C49129B1AF2900961422 /* mapstyle-bug.json in Resources */,
 				84A8BFF7EC2AFE5239DB222E /* step3@2x.png in Resources */,
 				3B647C56A107E00BC4815B1D /* australia.png in Resources */,
 				E4606BC764074DC9EE1A5E4E /* step7@2x.png in Resources */,
